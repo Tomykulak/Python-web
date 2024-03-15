@@ -1,0 +1,437 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3.5rem;
+  }
+  :root /* setting main parameters */
+  {
+    --bg-color: #FFFFFF;
+    --second-bg-color: #EEF0F4;
+    --text-color: #000000;
+    --main-color: #3371F2;
+    --white-color: #FFFFFF;
+    --h2-font: 5.3rem;
+    --big-font: 5.3rem;
+    --p-font: 1.1rem;
+  }
+  
+  body{
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  section{
+    padding: 120px 15%;
+  
+  }
+
+  .profile-btn{
+    color: var(--main-color);
+    font-weight: bold;
+  }
+
+  /* Login */
+  .login {
+    text-align: center;
+    background-color: var(--bg-color);
+  
+    height: 100vh;
+    width: 100%;
+    /* background: url(../img/pepeHappy.gif); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+  
+  
+  }
+  .input-group{
+    margin-bottom: 30px;
+  }
+  .input, textarea{
+  
+    padding: 10px;
+    width: 50%;
+  
+  }
+  .login-form form input{
+    width: 50%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    background: var(--second-bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .login-form textarea{
+    resize: none;
+    height: 200px;
+  }
+  .login-form .send{
+    display: inline-block;
+    background: var(--main-color);
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    width: 250px;
+    transition: ease .35s;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+  
+  
+  }
+  .login-form .send-button{
+    text-align: center;
+    margin: auto;
+    width: 20%;
+    margin-top: 20px;
+  
+    }
+  .login-form .send:hover{ 
+    transform: translateY(-8px);
+    cursor: pointer;
+  }
+  .alert_success {
+    height: 50%;
+    padding: 20px;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    width: 55%;
+    margin: 6% auto;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+  
+/* Employees */
+
+.employees{
+    background-color: var(--bg-color);
+    height: 100vh;
+    width: 100%;
+   
+
+}
+
+.content-table{
+  border-collapse: collapse;
+  margin: 30px 0;
+  font-size: var(--p-font);
+  width: 100%;
+  text-align: left;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.content-table thead{
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  height: 50px;
+  width: 100%;
+}
+.content-table th, .content-table td{
+  padding: 12px 15px;
+}
+.content-table tbody tr{
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr.active-row{
+  font-weight: bold;
+  color: #3371F2;
+}
+
+  /* Add profiles */
+
+  .add-form, h2{
+    padding-bottom: 15px;
+  }
+  .add-form {
+    text-align: center;
+    background-color: var(--bg-color);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+  }
+
+  
+  .input-group{
+    margin-bottom: 3px;
+  }
+  .input, textarea{
+
+    padding: 10px;
+    width: 50%;
+  }
+  .input, textarea, select{
+   
+    height: 55px;
+    padding: 10px;
+    width: 50%;
+    font-size: 18px;
+    border-radius: 8px;
+   cursor: pointer;
+   justify-content: space-between;
+   box-shadow: 0 0 5px rgba(0,0,0,0.1);
+   border-style: none;
+    
+  
+  }
+  .add-form form input{
+    width: 50%;
+    margin: 5px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    background: var(--second-bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+      text-align: center;
+      
+     
+    
+  }
+  .add-form textarea{
+    resize: none;
+    height: 200px;
+  }
+  .add-form .send{
+    display: inline-block;
+    background: var(--main-color);
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    width: 250px;
+    transition: ease .35s;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+  
+  
+  }
+  .add-form .send-button{
+    text-align: center;
+    margin: auto;
+    width: 20%;
+    margin-top: 20px;
+  
+    }
+  .add-form .send:hover{ 
+    transform: translateY(-8px);
+    cursor: pointer;
+
+
+
+    /* Actions */
+
+
+
+  }
+  .actions{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    align-items: center;
+    grid-template-columns: repeat(2,2fr);
+
+    align-content: center;
+
+    grid-gap: 2rem;
+    }
+    
+    .actions-text {
+      padding-top: 50px;
+      text-align: center;
+  
+     
+      
+    }
+ 
+  
+    .actions-text a{
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+    padding: 0 20px;
+    height: 60px;
+    width: 200px;
+    display: inline-block;
+    line-height: 60px;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    transition: all .30s;
+    border-style: none;    
+    color: var(--bg-color);
+    margin-bottom: 20px;
+  
+
+    }
+    .actions-text a:hover{
+      transform: translateY(-5px);
+    }
+
+    
+
+
+
+
+
+    .active-btn{
+      padding: 0 20px;
+      height: 40px;
+      width: 150px;
+      text-align: center;
+      display: inline-block;
+      line-height: 42px;
+      background-color: var(--main-color);
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500px;
+      letter-spacing: 1px;
+      transition: all .30s;
+      border-style: none;     
+    }
+    
+    .active-btn:hover{
+      transform: translateY(-5px);
+    
+    }
+
+    .active-btn a {
+      color: var(--bg-color);
+    }
+
+
+    /* Eshop */
+    .container {
+      display: flex;
+  }
+  
+  .card {
+      width: min-content;
+      padding: 20px;
+      margin: 0 20px;
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, .04);
+      transition: .4s ease;
+  }
+  
+  .card:hover {
+      transform: scale(1.05);
+  }
+  
+  .card .card-image {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      padding: 0 20px;
+      text-align: center;
+      background: #ffffff;
+      border-radius: 12px;
+  }
+  
+  .card .card-image img {
+      width: 100%;
+      height: 90%;
+      transition: .4s ease;
+  }
+  
+  .card:hover .card-image img {
+      transform: scale(1.02)
+                 translateX(-5px);
+  }
+  
+  .card .card-image .bx-star {
+      cursor: pointer;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 10px;
+      font-size: 20px;
+      color: #f7ae04;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, .04);
+  }
+  
+  .card .card-content h3 {
+      color: #222;
+      font-size: 22px;
+      margin-top: 20px;
+  }
+  
+  .card .card-content p {
+      color: #555;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 8px 0 22px;
+      text-align: justify;
+  }
+  
+  .card .card-content button {
+      cursor: pointer;
+      color: #fff;
+      width: 100%;
+      height: 50px;
+      font-size: 22px;
+      font-weight: 600;
+      border-radius: 12px;
+      background: linear-gradient(
+          45deg, #fabd14, #eb9616
+      );
+  }
+  
+  @media (max-width: 1280px) {
+      body {
+          height: unset;
+          padding: 30px 0;
+      }
+  
+      .container {
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+  
+      .container .card {
+          margin: 20px;
+      }
+  }
+
+
+
+ 

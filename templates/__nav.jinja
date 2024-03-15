@@ -1,0 +1,33 @@
+
+<!-- Navbar -->
+{% block nav %}
+<header>
+    <a href="/#" class="logo">Phone store</a>
+    <div class="bx bx-menu" id="menu-icon"> </div>
+        
+    <ul class="navbar">
+        <li><a href="/#home">Home</a> </li>
+        <li><a href="/#works">How it Works</a></li>
+        <li><a href="/#contact">Join Us</a></li>
+        <li><a href="{{url_for('shop')}}">Shop</a></li>
+        {% if session['role'] == "Admin" %}
+        
+            <li><a href="{{url_for('actions')}}">Actions</a></li>
+        {% endif %}
+
+    </ul>
+
+    {% if session['authenticated'] %}
+        <li class="li"><a href ="profile" class="profile-btn">{{session['login']}}</a></li>
+            <li class="li"><a href ="{{url_for('cart')}}"><img src="../static/img/shoppingCart.svg"></img></a></li>
+            <li class="li"><a href="{{url_for('sign_out')}}" class="h-btn">Logout </a> </li>
+        {% else %}
+            <li class="li"> <a href="{{url_for('sign_in')}}" class="h-btn">Login</a></li>
+    {% endif %}
+
+</header>
+<script src="/static/js/script.js"></script>
+
+
+<!-- {{url_for('shop')}} -->
+{% endblock%}

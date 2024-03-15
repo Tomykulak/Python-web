@@ -1,0 +1,18 @@
+{% extends '__main.jinja' %}
+{% from '/macros/form_field.jinja' import render_field with context %}
+
+{% block content %}
+
+    <section class="login">
+        <div class="login-form" id="login-form">
+        <form method='POST'>
+            <dl>
+                {{ render_field(form.new_first_name) }}
+                {{ render_field(form.new_email) }}
+                {{ render_field(form.new_password) }}
+            </dl>
+            <input type="submit" value="send" class="send">
+        </form>
+        </div>
+    </section>
+{% endblock %}

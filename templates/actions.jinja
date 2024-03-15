@@ -1,0 +1,22 @@
+{% extends '__main.jinja' %}
+
+{% block content %}
+  <content>
+    <section class="actions" id="actions">
+      <div class="actions-text">
+    <h2>Your Actions</h2>
+    <ul class="employees">
+      {% if session['role'] == "Admin" %}
+        <li><a href="{{url_for('employees')}}">Employees</a></li>
+        <li><a href="{{url_for('customers')}}">Customers</a></li>
+        <li><a href="{{url_for('add_profile')}}">Add profile</a></li>
+        <li><a href="{{url_for('add_phone')}}">Add phone</a></li>
+      {% endif %}
+    </ul>
+  </div>
+     </section>
+   
+
+  </content>
+
+{% endblock %}

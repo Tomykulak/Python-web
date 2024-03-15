@@ -1,0 +1,121 @@
+{% extends '__main.jinja' %}
+
+{% block content %}
+
+
+<!-- Home -->
+<content>
+   <section class="home" id="home">
+      <div class="home-text">
+         <h4>Welcome to the our</h4>
+         <h1>Phone <span>Shop</span></h1>
+         <h3>buy the best mobile phone on the market</h3>
+         <ul class="btn-home">
+            <li> <a href="#contact" class="h-btn">Join Us</a></li>
+            <li> <a href="#works" class="h-btn">Learn More</a></li>
+
+         </ul>
+
+       
+      </div>
+  
+      <div class="home-image">
+         <img src="/static/img/phone_picture_homepage.svg">
+      </div>
+   </section>
+
+   <!-- How it works -->
+
+   <section class="works" id="works">
+
+      
+      <div class="works-01">
+         <img src="/static/img/01_pic.svg" alt="pepega">
+      </div>
+
+      <div class="about-text">
+         <h2>01</h2>
+         <h5> Fill out the form</h5>
+         <p>
+
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Quisque tincidunt scelerisque
+            libero. Duis sapien nunc, commodo et, interdum suscipit,
+            sollicitudin et, dolor. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Donec
+            iaculis gravida nulla. Donec vitae arcu. Etiam bibendum elit
+            eget erat.
+         </p>
+      </div>
+
+      <div class="about-text">
+         <h2>02</h2>
+         <h5> Wait for comfirmation</h5>
+         <p>
+
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Quisque tincidunt scelerisque
+            libero. Duis sapien nunc, commodo et, interdum suscipit,
+            sollicitudin et, dolor. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Donec
+            iaculis gravida nulla. Donec vitae arcu. Etiam bibendum elit
+            eget erat.
+         </p>
+
+      </div>
+      <div class="works-01">
+         <img src="/static/img/02_pic.svg" alt="pepega">
+      </div>
+      <div class="works-01">
+         <img src="/static/img/03_pic.svg" alt="pepega">
+      </div>
+
+      <div class="about-text">
+         <h2>03</h2>
+         <h5> Let's go shopping</h5>
+         <p>
+
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Quisque tincidunt scelerisque
+            libero. Duis sapien nunc, commodo et, interdum suscipit,
+            sollicitudin et, dolor. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Donec
+            iaculis gravida nulla. Donec vitae arcu. Etiam bibendum elit
+            eget erat.
+         </p>
+         <a href="#contact" class="btn"> Get started</a> </div>
+
+
+   </section>
+
+   <!-- start contact -->
+   <section class="contact" id="contact">
+      <div class="contact-form">
+         <h2>Join Us</h2>
+         <form action="">
+            <div class="row">
+               <div class="input-group">
+                  <label for="name">First name</label>
+                  <input type="text" placeholder="Enter your first name" id="firstname" required>
+               </div>
+               <div class="input-group">
+                  <label for="name">Last name</label>
+                  <input type="text" placeholder="Enter your last name" id="lastname" required>
+               </div>
+            </div>
+            <div class="row">
+               <div class="input-group">
+                  <label for="email">E-mail</label>
+                  <input type="email" placeholder="Enter your e-mail" id="email" required>
+               </div>
+               <div class="input-group">
+                  <label for="number">Telephone number</label>
+                  <input type="text" placeholder="Enter your telephone number" id="number" required>
+               </div>
+            </div>
+            <div class="input-group">
+               <label for="number">Notes (optional)</label>
+               <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+               <div class="send-button">
+                  <input type="submit" name="" value="Send" class="send">
+               </div>
+            </div>
+      </div>
+      </form>
+   </section>
+</content>
+{% endblock %}

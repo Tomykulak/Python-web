@@ -1,0 +1,38 @@
+{% extends '__main.jinja' %}
+{% from '/macros/form_field.jinja' import render_field with context %}
+
+{% block content %}
+
+    <section>
+        
+     <div class="add-form" id="add-form">
+        <h2>Add profile</h2>
+        <form method='POST'>
+            <dl>
+                {{ render_field(form.new_position) }}
+                </br>
+                {{ render_field(form.new_first_name) }}
+                 </br>
+                {{ render_field(form.new_last_name) }}
+                 </br>
+                {{ render_field(form.new_phone_number) }}
+                 </br>
+                {{ render_field(form.new_email) }}
+                 </br>
+                {{ render_field(form.new_hourly_wage) }}
+                 </br>
+                {{ render_field(form.new_login_name) }}
+                 </br>
+                {{ render_field(form.new_password) }}
+                 </br>
+                {{ render_field(form.new_company_id) }}
+                 </br>
+                {{ render_field(form.new_active) }}
+            </dl>
+            </br>
+            </br>
+            <input type="submit" value="send" class="send">
+        </form>
+    </div>
+    </section>
+{% endblock %}

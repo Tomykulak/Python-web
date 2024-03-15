@@ -1,0 +1,13 @@
+{% extends '__main.jinja' %}
+
+{% block content %}
+
+    <section class="employees">
+        <div class="home-text">
+            <h2>Your Shopping Cart</h2>
+            {% for item in session['cart'] %}
+                <a>Phone: {{item}}</a>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends '__main.jinja' %}
+
+{% block content %}
+ 
+    <content>
+    <section class="employees" id="employees">
+
+    <!--TODO Vytvorit shop -->
+
+        <div class="home-text">
+            <h2>List of employees</h2>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Phone number</th>
+                        <th>Email</th>
+                        <th>Hourly wage</th>
+                        </tr>
+                </thead>   
+         
+                
+                {% for employee in employees %}
+            
+                    <tbody>
+                        <tr>
+                            <td data-label="Position">{{ employee.position }}</td>
+                            <td data-label="First name">{{ employee.first_name }}</td>
+                            <td data-label="Last name">{{ employee.last_name }}</td>
+                            <td data-label="Phone number">{{ employee.phone_number }}</td>
+                            <td data-label="Email">{{ employee.email }}</td>
+                            <td data-label="Hourly wage">{{ employee.hourly_wage }}</td>
+                        </tr>
+                    </tbody>
+
+
+                       
+                
+                {% endfor %}
+            </table>
+        </div>
+       </section>
+    </content>
+{% endblock %}

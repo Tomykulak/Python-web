@@ -1,0 +1,43 @@
+{% extends '__main.jinja' %}
+
+{% block content %}
+
+    <content>
+        <section class="employees" id="employees">
+
+            <!--TODO Vytvorit shop -->
+
+            <div class="home-text">
+                <h2>List of costumers</h2>
+                <table class="content-table">
+                    <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Phone number</th>
+                        <th>Email</th>
+                        <th>Active</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    {% for customer in customers %}
+                        <tr>
+                            <td data-label="Position">{{ customer.position }}</td>
+                            <td data-label="First name">{{ customer.first_name }}</td>
+                            <td data-label="Last name">{{ customer.last_name }}</td>
+                            <td data-label="Phonen number">{{ customer.phone_number }}</td>
+                            <td data-label="Email">{{ customer.email }}</td>
+                            <td data-label="Active">{{ customer.active }}</td>
+                            <td>
+                                <button class="active-btn" onclick="{{ updateUserActivity(customer.login_name,customer.active) }}"><a href="{{url_for('customers')}}" >activate</a></button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </section>
+    </content>
+{% endblock %}
+
+

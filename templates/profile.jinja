@@ -1,0 +1,41 @@
+{% extends '__main.jinja' %}
+
+{% block content %}
+ 
+    <content>
+        <section class="employees" id="employees">
+            <div class="home-text">
+                <h2>Your profile</h2>
+    <!--TODO Vytvorit shop -->
+   
+      
+             <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Phone number</th>
+                        <th>Email</th>
+                        <th>Hourly wage</th>
+                        </tr>
+                </thead>   
+                    <tbody>
+                    <tr>
+                        <td data-label="Position">{{ profile.position }}</td>
+                        <td data-label="First name">{{ profile.first_name }}</td>
+                        <td data-label="Last name">{{ profile.last_name }}</td>
+                        <td data-label="Phone number">{{ profile.phone_number }}</td>
+                        <td data-label="Email">{{ profile.email }}</td>
+                        <td data-label="Hourly wage">{{ profile.hourly_wage }}</td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+            <a href="{{url_for('edit_profile')}}" class="h-btn">Edit profile</a>
+        </div>
+       </section>
+    </content>
+{% endblock %}
+

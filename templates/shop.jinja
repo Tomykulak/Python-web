@@ -1,0 +1,31 @@
+{% extends '__main.jinja' %}
+
+{% block content %}
+ 
+    <content>
+        <section class="employees">
+     
+
+    <!--TODO Vytvorit shop -->
+        {% if phones | length == 0 %}
+            <div><h2>Žádné produkty.</h2></div>
+        {% else %}
+            <div class="container">
+                {% for phone in phones %}
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="product-img" src="{{ phone.img }}" alt="{{ phone.phone_name }}" width="200" height="200">
+                        </div>
+                        <div class="card-content">
+                            <p>CENA: {{phone.price}}</p>
+                            <p>{{phone.phone_name}}</p>
+                            <a class="h-btn" href="{{url_for('shop', phone_id=phone.id)}}"> BUY </a>
+                        </div>
+                    </div>
+                  
+                {% endfor %}
+            </div>
+            {% endif %}
+       </section>
+    </content>
+{% endblock %}
